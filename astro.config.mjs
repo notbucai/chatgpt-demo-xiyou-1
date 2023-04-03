@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import solidJs from '@astrojs/solid-js';
-import vercel from '@astrojs/vercel/edge';
+// import vercel from '@astrojs/vercel/edge';
+import node from '@astrojs/node';
 import tailwind from '@astrojs/tailwind';
 
 import react from '@astrojs/react';
@@ -9,5 +10,11 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [solidJs(), tailwind(), react()],
   output: 'server',
-  adapter: vercel({ analytics: true }),
+  server: {
+    host: '0.0.0.0',
+  },
+  // adapter: vercel({ analytics: true }),
+  adapter: node({
+    mode: 'standalone',
+  }),
 });

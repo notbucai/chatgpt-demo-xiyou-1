@@ -28,7 +28,7 @@ const GlobalConfigs: FC<{
           }}
         >
           <div className="flex items-center justify-between mb-[12px]">
-            <div>OpenAI Api Key:</div>
+            <div>Api Key:</div>
             <Input
               className="w-1/2"
               type="password"

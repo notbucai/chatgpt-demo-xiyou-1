@@ -14,6 +14,8 @@ import GlobalConfigs from './GlobalConfigs';
 import ClearMessages from './ClearMessages';
 import ConversationTabs from './ConversationTabs';
 
+import logo from '../assets/logo.png';
+
 const defaultConversation: Omit<Conversation, 'title'> = {
   id: '1',
   messages: [],
@@ -326,7 +328,8 @@ const Main: FC<{ i18n: I18n; lang: Lang }> = ({ i18n, lang }) => {
                 setShowPrompt(true);
               }}
             >
-              <i className="ri-user-add-line" />
+              {/* <i className="ri-user-add-line" /> */}
+              模式
             </div>
           </Tooltip>
           <ClearMessages
@@ -341,6 +344,25 @@ const Main: FC<{ i18n: I18n; lang: Lang }> = ({ i18n, lang }) => {
           />
         </div>
       </footer>
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '40%',
+          textAlign: 'center',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#999999',
+          gap: '12px',
+          zIndex: '-1',
+        }}
+      >
+        <img src={logo} style={{ width: '100px' }} />
+        <span>我是人工智能聊天机器人AI语伴，快来和我聊天吧！</span>
+      </div>
     </GlobalContext.Provider>
   );
 };

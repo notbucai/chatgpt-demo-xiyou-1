@@ -11,13 +11,14 @@
   "scripts": {
     "postinstall": "simple-git-hooks",
     "dev": "cross-env NODE_ENV=development astro dev",
-    "start": "cross-env NODE_ENV=development astro dev --host",
+    "start": "node dist/server/entry.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint --fix --quiet --ext .js,.ts,.tsx,.astro ."
   },
   "dependencies": {
+    "@astrojs/node": "^5.1.0",
     "@astrojs/react": "^2.1.0",
     "@astrojs/solid-js": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",

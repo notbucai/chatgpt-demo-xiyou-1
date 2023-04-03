@@ -14,7 +14,7 @@ RUN rm -rf node_modules cache
 
 RUN npm install -f --registry https://registry.npm.taobao.org --max-old-space-size=8192
 
-# RUN npm run build
+RUN npm run build
 
 EXPOSE 3000
 

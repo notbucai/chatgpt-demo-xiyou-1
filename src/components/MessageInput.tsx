@@ -86,12 +86,18 @@ const MessageInput: FC<{
         />
       </PromptSelect>
 
-      <i
+      <div
         className={`${
           disabled ? 'cursor-not-allowed' : 'cursor-pointer'
-        } text-gradient text-[24px] ml-[0.5rem] ri-send-plane-fill`}
+        } text-gradient text-[16px] flex items-center`}
+        style={{ width: '88px', textAlign: 'center' }}
         onClick={() => handleSubmit()}
-      />
+      >
+        <i
+          className={`text-gradient text-[24px] ri-send-plane-fill ml-[0.5rem]`}
+        />
+        <span>发送</span>
+      </div>
     </div>
   );
 };

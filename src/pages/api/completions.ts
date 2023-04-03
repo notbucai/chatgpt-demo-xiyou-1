@@ -12,7 +12,7 @@ const disableProxy = import.meta.env.DISABLE_LOCAL_PROXY === 'true';
 const baseURL =
   process.env.NODE_ENV === 'development' && !disableProxy
     ? 'agent-openai.ccrui.dev'
-    : 'api.openai.com';
+    : 'agent-openai.ccrui.dev';
 
 console.log('baseURL', baseURL);
 
