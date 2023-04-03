@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  "chatgpt-demo-xiu":
+    build: ./
+    image: ccr.ccs.tencentyun.com/bucai/chatgpt-demo-xiu:dev
+    container_name: chatgpt-demo-xiu
+    restart: always
+    ports: 
+      - "31022:3000"
+    networks:
+      - chatgpt-demo-xiu
+
+networks:
+  chatgpt-demo-xiu:
+    external: true

@@ -11,8 +11,10 @@ const disableProxy = import.meta.env.DISABLE_LOCAL_PROXY === 'true';
 // use proxy in local env
 const baseURL =
   process.env.NODE_ENV === 'development' && !disableProxy
-    ? 'gptgenius-proxy.zeabur.app/proxy'
+    ? 'agent-openai.ccrui.dev'
     : 'api.openai.com';
+
+console.log('baseURL', baseURL);
 
 export const post: APIRoute = async ({ request }) => {
   const body = await request.json();
@@ -22,11 +24,11 @@ export const post: APIRoute = async ({ request }) => {
   key = key || apiKey;
   model = model || defaultModel;
 
-  if (!key) {
-    return new Response(JSON.stringify({ msg: 'No API key provided' }), {
-      status: 400,
-    });
-  }
+  // if (!key) {
+  //   return new Response(JSON.stringify({ msg: 'No API key provided' }), {
+  //     status: 400,
+  //   });
+  // }
 
   if (!supportedModels.includes(model)) {
     return new Response(

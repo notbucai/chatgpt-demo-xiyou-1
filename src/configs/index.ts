@@ -3,10 +3,10 @@ export const localConversationKey = 'LOCAL_CONVERSATION';
 
 // From https://platform.openai.com/docs/models/model-endpoint-compatibility
 export const supportedModels = [
-  'gpt-4',
-  'gpt-4-0314',
-  'gpt-4-32k',
-  'gpt-4-32k-0314',
+  // 'gpt-4',
+  // 'gpt-4-0314',
+  // 'gpt-4-32k',
+  // 'gpt-4-32k-0314',
   'gpt-3.5-turbo',
   'gpt-3.5-turbo-0301',
 ] as const;

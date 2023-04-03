@@ -8,7 +8,7 @@ const GlobalContext = createContext<{
   isMobile: boolean;
 }>({
   i18n: {},
-  lang: 'en',
+  lang: 'zh',
   isMobile: false,
 });
 export default GlobalContext;

@@ -9,7 +9,6 @@
     "node": ">=16.12.0"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
     "dev": "cross-env NODE_ENV=development astro dev",
     "start": "cross-env NODE_ENV=development astro dev --host",
@@ -66,8 +65,5 @@
       "eslint --fix --quiet",
       "prettier --write"
     ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm exec lint-staged --concurrent false"
   }
 }
