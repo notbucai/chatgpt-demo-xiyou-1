@@ -12,7 +12,7 @@ RUN rm -rf node_modules cache
 
 # RUN npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-libvips
 
-RUN npm install -f --registry https://registry.npm.taobao.org --max-old-space-size=8192
+RUN npm install -f --max-old-space-size=8192
 
 RUN npm run build
 
