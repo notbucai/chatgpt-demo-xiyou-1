@@ -51,7 +51,7 @@ const PromptSelect: FC<{
         label: (
           <div className="p-1" onClick={() => onSelect(prompt.prompt)}>
             <div className="font-bold leading-8">{prompt.act}</div>
-            <div>{prompt.prompt}</div>
+            {/* <div>{prompt.prompt}</div> */}
           </div>
         ),
       })),

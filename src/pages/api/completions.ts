@@ -14,8 +14,6 @@ const baseURL =
     ? 'agent-openai.ccrui.dev'
     : 'agent-openai.ccrui.dev';
 
-console.log('baseURL', baseURL);
-
 export const post: APIRoute = async ({ request }) => {
   const body = await request.json();
   const { messages } = body;

@@ -329,7 +329,7 @@ const Main: FC<{ i18n: I18n; lang: Lang }> = ({ i18n, lang }) => {
               }}
             >
               {/* <i className="ri-user-add-line" /> */}
-              模式
+              预设
             </div>
           </Tooltip>
           <ClearMessages
