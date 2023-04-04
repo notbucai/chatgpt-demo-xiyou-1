@@ -11,8 +11,8 @@ const disableProxy = import.meta.env.DISABLE_LOCAL_PROXY === 'true';
 // use proxy in local env
 const baseURL =
   process.env.NODE_ENV === 'development' && !disableProxy
-    ? 'agent-openai.ccrui.dev'
-    : 'agent-openai.ccrui.dev';
+    ? 'yubanwhisper.com/openapi'
+    : 'yubanwhisper.com/openapi';
 
 export const post: APIRoute = async ({ request }) => {
   const body = await request.json();
